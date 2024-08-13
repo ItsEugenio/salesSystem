@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'environments/environment';
+
 declare var $: any;
 import {
   HttpClient,
@@ -13,9 +13,9 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class ApiService {
-  private host = environment.apiHost;
+  private host = 'https://erpventas-production.up.railway.app/salesSystem'
   //private host = 'http://146.190.147.217/salesSystem';
-  private staticFiles = environment.staticFiles;
+  private staticFiles = 'http://latienditadelmamado.com:3100/'
   private apiUrl = this.host + '/';
   constructor(
     private http: HttpClient,
